@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*,
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.container {
+  display: grid;
+  height: 720px;
+  max-width: 1280px;
+  grid-template-columns: 1fr auto auto auto;
+  grid-template-areas:
+    'company girl-hat woman-laugh woman-side'
+    'company girl-hat door        block--red'
+    'text    coffee   door       man-profile';
+  gap: 0;
+}
+
+.company {
+  grid-area: company;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.company__title {
+  font-size: 6.4rem;
+  font-family: 'Inter';
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 13.7rem;
+}
+.text {
+  grid-area: text;
+  background-color: rgba(130, 130, 130, 1);
+  height: 24.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text > .text__content {
+  font-size: 1.8rem;
+  color: rgba(242, 242, 242, 1);
+  max-width: 34.5rem;
+}
+.photo_girl-hat {
+  grid-area: girl-hat;
+  height: 47.3rem;
+}
+.photo_woman-laugh {
+  grid-area: woman-laugh;
+  height: 28.7rem;
+}
+.photo_door {
+  grid-area: door;
+}
+.photo_woman-side {
+  grid-area: woman-side;
+  height: 28.7rem;
+}
+.block--red {
+  grid-area: block--red;
+  height: 185px;
+  background-color: rgba(166, 28, 28, 1);
+}
+.photo_man-profile {
+  grid-area: man-profile;
+}
+.photo_coffee {
+  grid-area: coffee;
+  background-color: rgba(166, 128, 107, 1);
+  height: 24.7rem;
+}
+.company__icons {
+  display: flex;
+  gap: 2.4rem;
+}
