@@ -41,30 +41,24 @@ body {
   }
 }
 
-/* @media (max-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-  h1 {
-    font-size: 2em;
-  }
-}
-
 @media (max-width: 768px) {
   .container {
-    max-width: 740px;
-    grid-template-columns: 1fr;
-  }
-  nav {
-    display: none;
+    max-width: 74rem;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      'company company'
+      'girl-hat girl-hat'
+      'text text'
+      'coffee coffee'
+      'woman-laugh block--red  '
+      'man-profile woman-side';
   }
 }
-
-@media (max-width: 320px) {
-  body {
-    padding: 5px;
+@media (min-width: 320px) {
+  .container {
+    max-width: 100%;
   }
-} */
+}
 .company {
   grid-area: company;
   display: flex;
@@ -78,13 +72,27 @@ body {
     max-width: 34.2rem;
   }
 }
+@media (max-width: 768px) {
+  .company {
+    max-width: 54.5rem;
+    padding: 2rem;
+  }
+}
+
 .company__title {
   font-size: 6.4rem;
   font-family: 'Inter';
   font-weight: 600;
   text-align: center;
   margin-bottom: 13.7rem;
+  max-width: 61.8rem;
 }
+@media (max-width: 768px) {
+  .company__title {
+    margin-bottom: 7rem;
+  }
+}
+
 .text {
   grid-area: text;
   background-color: rgba(130, 130, 130, 1);
@@ -104,6 +112,17 @@ body {
     font-size: 1.5rem;
   }
 }
+@media (max-width: 768px) {
+  .text__content {
+    max-width: 29.4rem;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 320px) {
+  .text__content {
+    font-size: 2.5rem;
+  }
+}
 .photo_girl-hat {
   grid-area: girl-hat;
   height: 47.3rem;
@@ -111,6 +130,12 @@ body {
 .photo_woman-laugh {
   grid-area: woman-laugh;
   height: 28.7rem;
+}
+@media (max-width: 768px) {
+  .photo_woman-laugh__img {
+    max-width: 30rem;
+    width: 100%;
+  }
 }
 .photo_door {
   grid-area: door;
@@ -124,6 +149,14 @@ body {
   grid-area: woman-side;
   height: 28.7rem;
 }
+@media (max-width: 768px) {
+  .photo_woman-side__avatar {
+    max-width: 24.7rem;
+    width: 100%;
+    height: 32rem;
+  }
+}
+
 .block--red {
   grid-area: block--red;
   height: 18.6rem;
@@ -135,6 +168,13 @@ body {
     height: 21.6rem;
   }
 }
+@media (max-width: 768px) {
+  .block--red {
+    width: 24.8rem;
+    height: 38.2rem;
+  }
+}
+
 .photo_man-profile {
   grid-area: man-profile;
 }
@@ -144,10 +184,21 @@ body {
     width: 20rem;
   }
 }
+@media (max-width: 768px) {
+  .photo_man-profile__avatar {
+    height: 32rem;
+    width: 30rem;
+  }
+}
 .photo_coffee {
   grid-area: coffee;
   background-color: rgba(166, 128, 107, 1);
   height: 24.7rem;
+}
+@media (max-width: 768px) {
+  .photo_coffee {
+    height: 37rem;
+  }
 }
 .img {
   max-width: 100%;
