@@ -15,26 +15,68 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
   display: grid;
-  height: 720px;
-  max-width: 1280px;
+  max-width: 140rem;
   grid-template-columns: 1fr auto auto auto;
   grid-template-areas:
     'company girl-hat woman-laugh woman-side'
     'company girl-hat door        block--red'
     'text    coffee   door       man-profile';
-  gap: 0;
 }
 
+@media (max-width: 1200px) {
+  .container {
+    max-width: 114rem;
+    grid-template-columns: 1fr auto auto;
+    grid-template-areas:
+      'company company girl-hat girl-hat'
+      'text    text  coffee coffee'
+      'woman-laugh  woman-side man-profile block--red';
+  }
+}
+
+/* @media (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 740px;
+    grid-template-columns: 1fr;
+  }
+  nav {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    padding: 5px;
+  }
+} */
 .company {
   grid-area: company;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .company {
+    max-width: 34.2rem;
+  }
 }
 .company__title {
   font-size: 6.4rem;
@@ -51,10 +93,16 @@ body {
   justify-content: center;
   align-items: center;
 }
-.text > .text__content {
+.text__content {
   font-size: 1.8rem;
   color: rgba(242, 242, 242, 1);
   max-width: 34.5rem;
+}
+@media (max-width: 1200px) {
+  .text__content {
+    max-width: 29.4rem;
+    font-size: 1.5rem;
+  }
 }
 .photo_girl-hat {
   grid-area: girl-hat;
@@ -67,24 +115,48 @@ body {
 .photo_door {
   grid-area: door;
 }
+@media (max-width: 1200px) {
+  .photo_door {
+    display: none;
+  }
+}
 .photo_woman-side {
   grid-area: woman-side;
   height: 28.7rem;
 }
 .block--red {
   grid-area: block--red;
-  height: 185px;
+  height: 18.6rem;
   background-color: rgba(166, 28, 28, 1);
+}
+@media (max-width: 1200px) {
+  .block--red {
+    width: 16.5rem;
+    height: 21.6rem;
+  }
 }
 .photo_man-profile {
   grid-area: man-profile;
+}
+@media (max-width: 1200px) {
+  .photo_man-profile__avatar {
+    height: 21.6rem;
+    width: 20rem;
+  }
 }
 .photo_coffee {
   grid-area: coffee;
   background-color: rgba(166, 128, 107, 1);
   height: 24.7rem;
 }
+.img {
+  max-width: 100%;
+  height: auto;
+}
 .company__icons {
   display: flex;
   gap: 2.4rem;
+}
+.company__icons > img {
+  cursor: pointer;
 }
